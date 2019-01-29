@@ -5,8 +5,10 @@
 
 © Mark Dicker
 
-THis is a module that works with VanDerGraaf.  It uses filters to generate a html page from a wordpress page.  It would be entirely possible to replace this so that the output is PDF or LaTex.  Combine this with WooCommerce to create product catalogues etc.
+This module stores generated poages on S3.  A similar plugin can be written to upload to git or bibucket instead.
+
 
 Dependencies
 
 vandergraaf
+vandergraaf-page-generator
