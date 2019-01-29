@@ -1,0 +1,21 @@
+#!/bin/sh
+
+
+DEST="/Users/mark/docker/wordpress/wp-app/wp-content/plugins/vandergraaf-s3-storage"
+
+if [ ! -d "$DEST" ]; then
+	sudo -u root /bin/mkdir $DEST
+fi
+
+# if [ ! -d "$DEST/classes" ]; then
+# 	sudo -u root /bin/mkdir $DEST/classes
+# fi
+
+if [ ! -d "$DEST/aws-sdk" ]; then
+	sudo -u root /bin/mkdir $DEST/aws-sdk
+fi
+
+sudo -u root /bin/cp vandergraaf-s3-storage.php $DEST
+sudo -u root /bin/cp vs3-updater.php $DEST
+
+sudo -u root /bin/cp -r aws-sdk/* $DEST/aws-sdk
